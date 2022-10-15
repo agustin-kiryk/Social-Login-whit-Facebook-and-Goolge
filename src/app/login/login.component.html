@@ -1,2 +1,31 @@
 <app-menu></app-menu>
-<p>login works!</p>
+<div class="container" *ngIf ="! isLogged">
+    <div class="row m-3">
+        <div class="col-md-6 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                  Inicio de Sesion
+                </div>
+                <div class="card-body">
+                    <script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="14532755098-qe354stoe9j6hd25qiflbi43b9pbggeq.apps.googleusercontent.com">
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+                    <button class="btn btn-outline-primary btn-lg btn-block text-center" (click)="signInWithGoogle()">
+                        <i><img src="https://img.icons8.com/color/48/000000/google-logo.png"/></i> Iniciar Sesion  con Google  </button>
+                           
+                    <button class="btn btn-outline-primary btn-lg btn-block  text-center" (click)="signInWithFB()">
+                        <i><img src="https://img.icons8.com/color/48/000000/facebook-new.png"/></i> Iniciar Sesion  con Facebook
+                    </button>
+                 
+                </div>
+              </div>
+        </div>
+
+    </div>
+</div>
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
